@@ -1,0 +1,86 @@
+.shapedBtns-contianer {
+}
+
+.btn-m-container {
+  display: flex;
+  background-color: $color-red;
+  width: 140px;
+  height: 140px;
+  position:absolute;
+  top: 45%;
+  left: 46%;
+  transform: rotate(45deg);
+
+  &:hover {
+    background-color: $color-red-2;
+    transform: rotate(45deg) translateX(-1.5rem) translateY(-1.5rem) scale(1.1);
+  }
+
+
+  & .linkm-text {
+      @include text-fix;
+  }
+}
+
+  .btn-t-container {
+    display: flex;
+    background-color: $color-red;
+    width: 14rem;
+    height: 14rem;
+    position: absolute;
+    top: 45%;
+    left: 64%;
+    transform: rotate(45deg);
+
+    &:hover {
+      background-color: $color-red-2;
+      transform: rotate(45deg) translateX(-1.5rem) translateY(-1.5rem) scale(1.1);
+    }
+
+    & .linkt-text {
+        @include text-fix;
+      }
+  }
+  
+  .register-container {
+    display: flex;
+    background-color: black;
+    width: 14rem;
+    height: 14rem;
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    transform: rotate(45deg);
+
+    &:hover {
+      background-color: $color-red-2;
+      transform: rotate(45deg) translateX(-1.5rem) translateY(-1.5rem) scale(1.1);
+    }
+
+    &  .register-text {
+        @include text-fix;
+      }
+  }
+ 
+  .image-container {
+    display: flex;
+    width: 14rem;
+    height: 14rem;
+    position: absolute;
+    top: 60%;
+    left: 55%;
+    transform: rotate(45deg);
+
+    & .image-man {
+        position: absolute;
+        top: 5%;
+        left: 20%;
+        transform: rotate(-45deg);
+      }
+    
+    &:hover {
+      transform: rotate(45deg) scale(1.1);
+    }
+  }
+
+  

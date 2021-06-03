@@ -1,0 +1,79 @@
+.general-test-details-div {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+    margin: 5rem;
+  }
+  
+  .unit-sn-label {
+    display: inline;
+  }
+  
+  .general-test-item {
+    display: inline;
+    font-size: medium;
+  }
+  
+  .general-test-item,
+  .unit-sn-label {
+    border: 1px solid black;
+    width: 100%;
+  }
+  
+  .ambient-temp-div {
+    align-items: center;
+    margin-bottom: 30rem;
+  }
+
+  .general-table {
+    width: 80%;
+    margin-top: 5rem;
+  }
+  
+  table {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    width: 40%;
+  }
+  
+  table,
+  th,
+  td {
+    border: 2px solid rgba(24, 32, 143, 0.712);
+  }
+  
+  .unit-sn-label {
+    display: inline;
+  }
+  
+  .general-test-item {
+    display: inline;
+  }
+  
+  .cur-cons-data-div {
+    background-color: rgb(235, 213, 183);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .current-consumption-header {
+    text-decoration: underline;
+    margin-bottom: 5%;
+  }
+  
+  .cur-cons-table {
+    position: relative;
+    right: 0%;
+    transform: translateX(0%);
+    width: 100%;
+  }
+  
+  .cur-con-result {
+    margin-top: 5%;
+  }
+  

@@ -1,0 +1,19 @@
+@mixin text-fix {
+    font-family: "Montserrat-Light";
+    font-size: 17.9px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    color: #fff;
+    line-height: 0;
+    text-decoration: none;
+}
+
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}

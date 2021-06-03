@@ -1,9 +1,12 @@
 {
-  "name": "server",
+  "name": "tester-db-manager",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodemon ./bin/www",
+    "client": "npm start --prefix client",
+    "clientinstall": "npm install --prefix client",
+    "dev": "concurrently \"npm run start\" \"npm run client\""
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -19,5 +22,8 @@
     "mongoose": "^5.11.14",
     "morgan": "~1.9.0",
     "nodemon": "^2.0.4"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0"
   }
 }

@@ -2,7 +2,7 @@ var createError = require("http-errors")
 const bodyParser = require('body-parser');
 var express = require("express");
 const connectDB = require('./config/db');
-var path = require("path")
+var path = require("path");
 const mongoose = require('mongoose');
 var cookieParser = require("cookie-parser")
 var logger = require("morgan")
@@ -18,11 +18,6 @@ var generalRouter = require("./routes/generalData");
 var app = express();
 connectDB();
 
-app.use(express.static(path.join(__dirname, "build")))
-
-app.get("/react", (req, res) => {
- res.sendFile(path.join(__dirname, "build", "index.html"))
-});
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"))
@@ -35,12 +30,24 @@ app.use(cookieParser())
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, "public")))
 
-app.use("/", indexRouter);
+// app.use("/", indexRouter);
 app.use("/api/users", usersRouter);
 app.use("/api/auth_users", authUsersRouter);
 app.use("/api/auth", authRouter);
 app.use("/articles", articleRouter);
 app.use("/general-test-data", generalRouter);
+
+
+
+// Serve static assets in production
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('client/build'));
+
+    app.get("*", (req, res) => {
+        res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
+    });
+}
+
 
 // const mongoPwd = "MG841752!";
 // const dbName = "testDB";
@@ -575,7 +582,6 @@ app.route("/full-link-general/findbyid/:collectionId")
             }
         });
     });
-
 
 
 
