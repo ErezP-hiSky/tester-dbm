@@ -26,7 +26,7 @@ import Alerts from './components/layout/Alerts';
 import AuthState from './context/auth/AuthState';
 import AlertState from './context/alert/AlertState';
 import setAuthToken from './utils/setAuthToken';
-import '../src/sass/main.scss';
+import './sass/main.scss';
 // import './App.css';
 
 if (localStorage.token) {
